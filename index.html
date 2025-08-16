@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings — RevealJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Reveal.js core styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+
+  <!-- Code syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+
+  <style>
+    .footer-email {
+      position: fixed;
+      right: 16px;
+      bottom: 12px;
+      font-size: 16px;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+    .reveal .slides section h2, .reveal .slides section h3 {
+      letter-spacing: .3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title slide -->
+      <section>
+        <h2>Quarterly Earnings Report</h2>
+        <p>Technical Consultant — Major Financial Institution</p>
+        <p>Email: <a href="mailto:22f3000898@ds.study.iitm.ac.in">22f3000898@ds.study.iitm.ac.in</a></p>
+        <aside class="notes">
+          Welcome the stakeholders. Mention the agenda: performance highlights, key drivers, costs, outlook.
+          Remind yourself to demo the interactive features (fragments, code, and math) to show modern capabilities.
+        </aside>
+      </section>
+
+      <!-- Markdown slide (at least one) -->
+      <section data-markdown>
+        <textarea data-template>
+# Performance Highlights *(Markdown)*
+
+- **Revenue** grew **12% YoY**
+- **Net Income** up **8% YoY**
+- **EPS**: `₹ 12.34`
+- *Outlook*: Maintain guidance with cautious optimism
+
+> _Note to self (speaker notes are separate on other slides): talk through drivers—volume, pricing, FX._
+        </textarea>
+      </section>
+
+      <!-- Animated fragments -->
+      <section>
+        <h3>Animated Highlights (Fragments)</h3>
+        <ul>
+          <li class="fragment fade-up">Revenue Growth: <strong>12%</strong></li>
+          <li class="fragment fade-up">Operating Margin: <strong>18%</strong></li>
+          <li class="fragment fade-up">Cash &amp; Equivalents: <strong>₹ 2,350 Cr</strong></li>
+        </ul>
+        <aside class="notes">Use the spacebar or right arrow to reveal each metric. Pause to take questions.</aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting -->
+      <section>
+        <h3>Code Sample (Python)</h3>
+        <pre><code class="language-python" data-trim data-line-numbers>
+from math import pow
+
+def compound_growth(pv: float, r: float, n: int, t: float) -> float:
+    """Future Value with compounding
+    pv: principal, r: annual rate, n: compounds/yr, t: years
+    """
+    return pv * pow(1 + r / n, n * t)
+
+print(compound_growth(1_000_000, 0.08, 4, 1))
+        </code></pre>
+        <aside class="notes">Explain how this snippet calculates FV with quarterly compounding and why this matters for treasury planning.</aside>
+      </section>
+
+      <!-- Math / financial formulas -->
+      <section>
+        <h3>Financial Formulae (Math)</h3>
+        <p>Present Value of future cash flow: \( PV = \dfrac{CF}{(1+r)^t} \)</p>
+        <p>Future Value with compounding: \( FV = PV\, \left(1+\frac{r}{n}\right)^{n t} \)</p>
+        <p>CAPM: \( E[R_i] = R_f + \beta_i\,(E[R_m]-R_f) \)</p>
+        <aside class="notes">Relate formulas to actual numbers from this quarter—discount rate assumptions and sensitivity.</aside>
+      </section>
+
+      <!-- Speaker notes demo -->
+      <section>
+        <h3>Using Speaker Notes</h3>
+        <p>Press <kbd>S</kbd> during the talk to open presenter view.</p>
+        <aside class="notes">Presenter view shows current/next slide and a timer—great for pacing.</aside>
+      </section>
+
+      <section>
+        <h3>Thank You</h3>
+        <p>Contact: <a href="mailto:22f3000898@ds.study.iitm.ac.in">22f3000898@ds.study.iitm.ac.in</a></p>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="footer-email">22f3000898@ds.study.iitm.ac.in</div>
+
+  <!-- Reveal.js core + plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+  <!-- KaTeX JS (for RevealMath.KaTeX) -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [ RevealMarkdown, RevealNotes, RevealHighlight, RevealMath.KaTeX ],
+      math: {
+        // KaTeX is provided via the script tag above
+      }
+    });
+  </script>
+</body>
+</html>
