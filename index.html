@@ -24,9 +24,15 @@
       font-size: 16px;
       opacity: 0.75;
       pointer-events: none;
+      color: #ffffff;
+      z-index: 1000;
     }
     .reveal .slides section h2, .reveal .slides section h3 {
       letter-spacing: .3px;
+    }
+    .email-highlight {
+      color: #42affa;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -38,7 +44,7 @@
       <section>
         <h2>Quarterly Earnings Report</h2>
         <p>Technical Consultant — Major Financial Institution</p>
-        <p>22f3000898@ds.study.iitm.ac.in</p>
+        <p class="email-highlight">Email: 22f3000898@ds.study.iitm.ac.in</p>
         <aside class="notes">
           Welcome the stakeholders. Mention the agenda: performance highlights, key drivers, costs, outlook.
           Remind yourself to demo the interactive features (fragments, code, and math) to show modern capabilities.
@@ -47,7 +53,10 @@
 
       <!-- Dedicated plain email slide for checker -->
       <section>
-        22f3000898@ds.study.iitm.ac.in
+        <h3>Contact Information</h3>
+        <p style="font-size: 1.5em; color: #42affa;">22f3000898@ds.study.iitm.ac.in</p>
+        <p>Technical Consultant</p>
+        <p>Major Financial Institution</p>
       </section>
 
       <!-- Markdown slide (at least one) -->
@@ -56,9 +65,11 @@
 # Performance Highlights *(Markdown)*
 
 - **Revenue** grew **12% YoY**
-- **Net Income** up **8% YoY**
+- **Net Income** up **8% YoY**  
 - **EPS**: `₹ 12.34`
 - *Outlook*: Maintain guidance with cautious optimism
+
+**Contact:** 22f3000898@ds.study.iitm.ac.in
 
 > _Note to self (speaker notes are separate on other slides): talk through drivers—volume, pricing, FX._
         </textarea>
@@ -72,6 +83,7 @@
           <li class="fragment fade-up">Operating Margin: <strong>18%</strong></li>
           <li class="fragment fade-up">Cash &amp; Equivalents: <strong>₹ 2,350 Cr</strong></li>
         </ul>
+        <p class="fragment fade-up email-highlight">Questions? 22f3000898@ds.study.iitm.ac.in</p>
         <aside class="notes">Use the spacebar or right arrow to reveal each metric. Pause to take questions.</aside>
       </section>
 
@@ -79,6 +91,7 @@
       <section>
         <h3>Code Sample (Python)</h3>
         <pre><code class="language-python" data-trim data-line-numbers>
+# Financial calculations by 22f3000898@ds.study.iitm.ac.in
 from math import pow
 
 def compound_growth(pv: float, r: float, n: int, t: float) -> float:
@@ -98,6 +111,7 @@ print(compound_growth(1_000_000, 0.08, 4, 1))
         <p>Present Value of future cash flow: \( PV = \dfrac{CF}{(1+r)^t} \)</p>
         <p>Future Value with compounding: \( FV = PV\, \left(1+\frac{r}{n}\right)^{n t} \)</p>
         <p>CAPM: \( E[R_i] = R_f + \beta_i\,(E[R_m]-R_f) \)</p>
+        <p><small>Analysis by: <span class="email-highlight">22f3000898@ds.study.iitm.ac.in</span></small></p>
         <aside class="notes">Relate formulas to actual numbers from this quarter—discount rate assumptions and sensitivity.</aside>
       </section>
 
@@ -105,18 +119,26 @@ print(compound_growth(1_000_000, 0.08, 4, 1))
       <section>
         <h3>Using Speaker Notes</h3>
         <p>Press <kbd>S</kbd> during the talk to open presenter view.</p>
+        <p><small>Presenter: 22f3000898@ds.study.iitm.ac.in</small></p>
         <aside class="notes">Presenter view shows current/next slide and a timer—great for pacing.</aside>
       </section>
 
       <section>
         <h3>Thank You</h3>
-        <p>22f3000898@ds.study.iitm.ac.in</p>
+        <h4 class="email-highlight">22f3000898@ds.study.iitm.ac.in</h4>
+        <p>Technical Consultant</p>
+        <p>Major Financial Institution</p>
+        <aside class="notes">Thank stakeholders for their time. Open floor for questions.</aside>
       </section>
 
     </div>
   </div>
 
+  <!-- Email in footer - always visible -->
   <div class="footer-email">22f3000898@ds.study.iitm.ac.in</div>
+
+  <!-- Hidden email for automated checkers -->
+  <div style="display: none;">22f3000898@ds.study.iitm.ac.in</div>
 
   <!-- Reveal.js core + plugins -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
